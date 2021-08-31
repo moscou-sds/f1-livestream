@@ -1,0 +1,28 @@
+html {
+  background-color: #282828;
+  padding: 0 0 0 0;
+}
+.f1tv {
+  padding: 4% 4% 2%;
+}
+.f1-chat {
+  padding: 1% 0% 2%;
+}
+.submid {
+  background: rgb(255, 250, 250);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 250, 250, 1) 0%,
+    rgba(255, 250, 250, 1) 80%,
+    rgba(40, 40, 40, 1) 80%,
+    rgba(40, 40, 40, 1) 100%
+  );
+}
+.timer-div {
+  padding: 2%;
+  text-align: center;
+  color: aliceblue;
+}
+.f1start {
+  display: block;
+}
