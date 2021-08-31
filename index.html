@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>f1-livestream</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favi/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favi/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="styles-es.css">
 </head>
 <script>
@@ -16,44 +18,45 @@
     }
   </script>  
 <body style="font-family: 'Roboto Mono', monospace; margin: 0;">
-    <header>
-    </header>
-    <iframe src="//f1livegp.me/f1/live.php" name="frame" scrolling="no" frameborder="no" height="720px" width="1280px" class="f1tv"></iframe>
-    <iframe src="https://www.twitch.tv/embed/sebasmoskovic/chat?parent=moscou-sds.github.io" frameborder="0" height="720px" width="300px" class="f1-chat" scrolling="no" onload="resizeIframe(this)" ></iframe>
+    <div class="responsive">
+        <iframe src="//f1livegp.me/f1/live.php" name="frame" scrolling="no" frameborder="no" height="720px" width="1280px" class="f1tv"></iframe>
+    
+        <iframe src="https://www.twitch.tv/embed/sebasmoskovic/chat?parent=127.0.0.1" frameborder="0" height="720px" width="300px" class="f1-chat" scrolling="no" onload="resizeIframe(this)" ></iframe>    
+    </div>
     <div class="submid">
         <div class="timer-div" style="font-size: 40px;">
                 <!-- Display the countdown timer in an element -->
-                <p id="timer"></p>
-
+                <p id="timer"><h3></p>
+                
                 <script>
-                // Set the date we're counting down to
-                var countDownDate = new Date("Sep 3, 2021 06:30:00").getTime();
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Sep 5, 2021 10:00:00").getTime();
 
-                // Update the count down every 1 second
-                var x = setInterval(function() {
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
 
-                // Get today's date and time
-                var now = new Date().getTime();
+                    // Get today's date and time
+                    var now = new Date().getTime();
 
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the element with id="demo"
-                document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+                    // Display the result in the element with id="demo"
+                    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
 
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("timer").innerHTML = "EXPIRED";
-                }
-                }, 1000);
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("timer").innerHTML = "RACE";
+                    }
+                    }, 1000);
                 </script>
         </div>
         <p align="center"><iframe src="https://f1-start.glitch.me/" style="background-color: Snow;" class="f1start" height = "600px" width = "500px" frameBorder="0"></iframe></p>    
