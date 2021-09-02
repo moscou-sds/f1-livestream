@@ -1,6 +1,9 @@
 html {
   background-color: #282828;
 }
+h3{
+  color: snow;
+}
 .responsive {
   display: block;
   width: 100%;
