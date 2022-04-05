@@ -18,49 +18,19 @@
     }
   </script>  
 <body style="font-family: 'Roboto Mono', monospace; margin: 0;">
-    <div class="responsive">
-        <iframe src="//f1livegp.me/f1/live.php" name="frame" scrolling="no" frameborder="no" height="720px" width="1280px" allowfullscreen class="f1tv"></iframe>
-    
-        <iframe src="https://www.twitch.tv/embed/sebasmoskovic/chat?parent=moscou-sds.github.io" frameborder="0" height="720px" width="300px" class="f1-chat" scrolling="no" onload="resizeIframe(this)" ></iframe>    
+    <div>
+        <a href="https://www.formula1.com/en/racing/2022.html" target="_blank" class="button">Go to F1 Calendar</a>
+        <a href="https://www.formula1.com/en/results.html/2022/drivers.html" target="_blank" class="button">Go to Drivers Standings</a>
+        <a href="https://www.formula1.com/en/results.html/2022/team.html" target="_blank" class="button">Go to Constructor Standings</a>
+        
+
     </div>
+    <div class="responsive">
+        <iframe src="//f1livegp.me/f1/live.php" name="frame" scrolling="no" frameborder="no" height="570px" width="2000px" allowfullscreen class="f1tv"></iframe>
+    </div>
+    
     <div class="submid">
-        <div class="timer-div" style="font-size: 40px;">
-                <!-- Display the countdown timer in an element -->
-                <p id="timer"><h3></p>
-                
-                <script>
-                    // Set the date we're counting down to
-                    var countDownDate = new Date("Sep 26, 2021 09:00:00").getTime();
-
-                    // Update the count down every 1 second
-                    var x = setInterval(function() {
-
-                    // Get today's date and time
-                    var now = new Date().getTime();
-
-                    // Find the distance between now and the count down date
-                    var distance = countDownDate - now;
-
-                    // Time calculations for days, hours, minutes and seconds
-                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Display the result in the element with id="demo"
-                    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-                    + minutes + "m " + seconds + "s ";
-
-                    // If the count down is finished, write some text
-                    if (distance < 0) {
-                        clearInterval(x);
-                        document.getElementById("timer").innerHTML = "RACE";
-                    }
-                    }, 1000);
-                </script>
-        </div>
         <p align="center"><iframe src="https://f1-start.glitch.me/" style="background-color: Snow;" class="f1start" height = "600px" width = "500px" frameBorder="0"></iframe></p>    
     </div>
-    <h3>donation -> 0x3844a69E1D8662206E0357Ce14C5309D70B373d1</h3>
 </body>
 </html>
